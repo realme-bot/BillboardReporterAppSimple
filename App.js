@@ -16,6 +16,7 @@ import {
   ActivityIndicator,
   Platform,
   Linking
+  
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import * as ImagePicker from 'expo-image-picker';
@@ -24,10 +25,13 @@ import * as FileSystem from 'expo-file-system';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as Notifications from 'expo-notifications';
 
+import { REACT_APP_GOOGLE_VISION_API_KEY } from '@env';
+
 const { width } = Dimensions.get('window');
 
-// Google Vision API Configuration - Replace with your actual API key
-const GOOGLE_VISION_API_KEY = 'AIzaSyBs9cTTyXkBAODZSisyH7Es4ZisZp4x_FY';
+// Use your key directly
+console.log("Google Vision API Key:", REACT_APP_GOOGLE_VISION_API_KEY);
+
 
 // Configure notifications
 Notifications.setNotificationHandler({
@@ -37,6 +41,7 @@ Notifications.setNotificationHandler({
     shouldSetBadge: false,
   }),
 });
+
 
 export default function BillboardReporterApp() {
   const [activeTab, setActiveTab] = useState('home');
@@ -1731,6 +1736,7 @@ const styles = StyleSheet.create({
   statusPendingText: {
     color: '#d97706',
   },
+
   statusViolationText: {
     color: '#dc2626',
   },
@@ -2048,4 +2054,3 @@ const styles = StyleSheet.create({
     fontWeight: '500',
   },
 });
-
