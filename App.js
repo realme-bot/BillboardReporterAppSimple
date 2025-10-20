@@ -1731,6 +1731,7 @@ const styles = StyleSheet.create({
   statusPendingText: {
     color: '#d97706',
   },
+  
   statusViolationText: {
     color: '#dc2626',
   },
