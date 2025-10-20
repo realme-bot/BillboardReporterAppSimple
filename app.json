@@ -1,29 +1,24 @@
 {
   "expo": {
-    "name": "BillboardReporterAppSimple",
-    "slug": "BillboardReporterAppSimple",
+    "name": "Billboard Reporter",
+    "slug": "billboard-reporter",
     "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
-    "newArchEnabled": true,
-    "splash": {
-      "image": "./assets/splash-icon.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
+    "platforms": ["ios", "android"],
     "ios": {
-      "supportsTablet": true
+      "infoPlist": {
+        "NSCameraUsageDescription": "This app needs access to camera to take photos of billboards.",
+        "NSPhotoLibraryUsageDescription": "This app needs access to photo library to select billboard images.",
+        "NSLocationWhenInUseUsageDescription": "This app needs location access to auto-fill billboard locations."
+      }
     },
     "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      },
-      "edgeToEdgeEnabled": true
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION"
+      ]
     }
   }
 }
