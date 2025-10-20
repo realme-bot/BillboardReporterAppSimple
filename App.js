@@ -27,7 +27,9 @@ import * as Notifications from 'expo-notifications';
 const { width } = Dimensions.get('window');
 
 // Google Vision API Configuration - Replace with your actual API key
-const GOOGLE_VISION_API_KEY = '***REMOVED***';
+
+const GOOGLE_VISION_API_KEY = process.env.REACT_APP_GOOGLE_VISION_API_KEY;
+
 
 // Configure notifications
 Notifications.setNotificationHandler({
@@ -1731,7 +1733,7 @@ const styles = StyleSheet.create({
   statusPendingText: {
     color: '#d97706',
   },
-  
+
   statusViolationText: {
     color: '#dc2626',
   },
