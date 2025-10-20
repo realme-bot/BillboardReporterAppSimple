@@ -33,6 +33,7 @@ const { width } = Dimensions.get('window');
 console.log("Google Vision API Key:", REACT_APP_GOOGLE_VISION_API_KEY);
 
 
+
 // Configure notifications
 Notifications.setNotificationHandler({
   handleNotification: async () => ({
